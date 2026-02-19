@@ -10,60 +10,41 @@ import bethel from './image/BethelLogo.png';
 import sterling from './image/SterlingLogo.png';
 import stronghold from './image/stronghold.jpg';
 import milestone from './image/MilestoneLogo.png';
+import christianity from './image/christianity.png';
+import analytics from './image/analytics.png';
+import scale from './image/scale.png';
+import handshake from './image/handshake.png';
+import teamsupport from './image/team-support.png';
 
 const coreValues = [
   {
     title: "FAITH",
     text: "WE HAVE BEEN CREATED TO GLORIFY GOD BY BEING GOOD STEWARDS OF WHAT HAS BEEN ENTRUSTED TO US.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="white" style={{ width: "56px", height: "56px" }}>
-        <path d="M11 2v7H4v2h7v11h2V11h7V9h-7V2z"/>
-      </svg>
-    ),
+    icon: <img src={christianity} height={60} width={80} alt="Christianity" className="h-16 object-contain" />,
     bg: "#c0392b",
   },
   {
     title: "SERVICE EXCELLENCE",
     text: "HONORING COMMITMENT TO OUR PARTNERS AND GIVING SATISFACTION TO OUR CLIENTS' NEEDS THAT BEGINS AND ENDS WITH OUR PEOPLE.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" style={{ width: "56px", height: "56px" }}>
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-        <polyline points="18 16 22 12 18 8"/>
-      </svg>
-    ),
+    icon: <img src={analytics} height={60} width={80} alt="Analytics" className="h-16 object-contain" />,
     bg: "#a93226",
   },
   {
     title: "HONESTY AND INTEGRITY",
     text: "WHOLENESS OF OUR PEOPLE TO EARN THE TRUST OF OUR CLIENTS AND PARTNERS AND TO ACT FAIRLY WITHOUT COMPROMISING THE TRUTH.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="white" style={{ width: "56px", height: "56px" }}>
-        <path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4zm-1.41 11.59L7.5 10.5l1.41-1.41L10.59 11l4.99-4.99 1.41 1.41-6.4 6.17z"/>
-      </svg>
-    ),
+    icon: <img src={scale} height={60} width={80} alt="Scale" className="h-16 object-contain" />,
     bg: "#922b21",
   },
   {
     title: "RELIABILITY",
     text: "TO COMPLY CONSISTENTLY IN TAKING RESPONSIBILITY AND MAINTAINING ACCOUNTABILITY WITH OUR COMMITMENT TO OUR CLIENTS AND PRINCIPAL PARTNERS IN ORDER TO MAINTAIN OUR GOOD REPUTATION IN THE INDUSTRY.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "56px", height: "56px" }}>
-        <path d="M17 11h4l-8 9-8-9h4V3h8v8z"/>
-      </svg>
-    ),
+    icon: <img src={handshake} height={60} width={80} alt="Handshake" className="h-16 object-contain" />,
     bg: "#7b241c",
   },
   {
     title: "PROFESSIONALISM AND TEAMWORK",
     text: "OUR PEOPLE IS CAPABLE OF DELIVERING EXCEPTIONAL SKILLS & COMPETENCE IN SERVICING OUR CLIENTS AND PARTNERS.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "56px", height: "56px" }}>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-        <path d="M21 21v-2a4 4 0 0 0-3-3.87"/>
-      </svg>
-    ),
+    icon: <img src={teamsupport} height={60} width={80} alt="Team Support" className="h-16 object-contain" />,
     bg: "#641e16",
   },
 ];
@@ -74,11 +55,14 @@ function GoldplanAbout() {
       <Header />
       <main className="main-content">
         <h1 className="page-title" style={{ textAlign: "center" }}>YOUR SECURITY IS OUR PRIORITY!</h1>
+        <br></br>
         <p style={{ textAlign: "center" }}>Life is unpredictable. Accidents, natural disasters, or unforeseen events can strike when you least expect. Having the right insurance protects you, your family, and your assets from financial hardship, giving you peace of mind and security no matter what happens next.
         <p>With GOLDPLAN INSURANCE SERVICES, you're always prepared for the unexpected.</p>
         </p>
+        <br></br>
 
         <h1 style={{ textAlign: "center" }}>COMPANY OVERVIEW</h1>
+        <br></br>
         <p style={{ textAlign: "center" }}>GOLDPLAN INSURANCE SERVICES, founded in March 2004 by Perry and Jennifer Bucay, provides essential insurance protection.</p>
         <p>The company has gained strong customer recognition by partnering with top insurance providers. GOLDPLAN offers innovative services to meet evolving client needs. It is recognized as a "Best Innovative Solution Provider" for non-life insurance and auto loan financing.</p>
         <p>As a hassle-free "one-stop-shop," GOLDPLAN focuses on client satisfaction. The company stays current with industry trends to deliver the best service.</p>
@@ -107,6 +91,7 @@ function GoldplanAbout() {
                 fontFamily: "'Arial Black', Impact, sans-serif",
                 margin: 0,
               }}>
+   
                 OUR CORE VALUES
               </h2>
             </div>
@@ -162,7 +147,7 @@ function GoldplanAbout() {
 
           {/* Mission Section */}
           <div style={{ backgroundColor: "#111" }} className="py-20 px-6"></div>
-          <section className="bg-[#1c1c1c] py-24 px-6">
+          <section style={{ backgroundColor: "#1c1c1c", minHeight: "100vh", width: "100vw", marginLeft: "calc(-50vw + 50%)", padding: "96px 48px", boxSizing: "border-box" }}>
             <div className="max-w-7xl mx-auto">
               <h1 className="text-center text-white text-6xl md:text-7xl font-extrabold tracking-wider mb-20 uppercase">
                 OUR PRECIOUS MISSION
