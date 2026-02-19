@@ -74,6 +74,7 @@ function GoldplanAbout() {
           <h1>OUR GOLDEN VISION</h1>
           <p>GOLDPLAN INSURANCE SERVICES aims to become the #1 non-life insurance agency in the Philippines, providing remarkable and balanced business relationships that create positive and lasting experiences for our customers and business partners. We aspire to be the foremost insurance service provider that comes to mind regarding non-life insurance, offering unparalleled service.</p>
 
+        <section style={{ backgroundColor: "#1c1c1c", minHeight: "100vh", width: "100vw", marginLeft: "calc(-50vw + 50%)", padding: "96px 48px", boxSizing: "border-box" }}>
           {/* ── OUR CORE VALUES ── */}
           <div style={{ width: "100%" }}>
             {/* Header */}
@@ -81,6 +82,8 @@ function GoldplanAbout() {
               background: "linear-gradient(to bottom, #f0f0f0, #e0e0e0)",
               textAlign: "center",
               padding: "56px 24px",
+              width: "100vw",
+              marginLeft: "calc(-50vw + 50%)"
             }}>
               <h2 style={{
                 color: "#c0392b",
@@ -92,12 +95,12 @@ function GoldplanAbout() {
                 margin: 0,
               }}>
    
-                OUR CORE VALUES
+                <p style={{ margin: 0, fontSize: "1.5rem", fontWeight: 700 }}>OUR CORE VALUES</p>
               </h2>
             </div>
 
             {/* Five columns */}
-            <div style={{ display: "flex", flexWrap: "wrap", width: "100%" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", width: "100vw", marginLeft: "calc(-50vw + 50%)"}}>
               {coreValues.map((val, i) => (
                 <div
                   key={i}
@@ -143,6 +146,7 @@ function GoldplanAbout() {
               ))}
             </div>
           </div>
+          </section>
           {/* ── END OUR CORE VALUES ── */}
 
           {/* Mission Section */}
