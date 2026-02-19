@@ -20,246 +20,484 @@ const coreValues = [
   {
     title: "FAITH",
     text: "WE HAVE BEEN CREATED TO GLORIFY GOD BY BEING GOOD STEWARDS OF WHAT HAS BEEN ENTRUSTED TO US.",
-    icon: <img src={christianity} height={60} width={80} alt="Christianity" className="h-16 object-contain" />,
+    icon: <img src={christianity} height={60} width={80} alt="Faith" style={{ objectFit: "contain" }} />,
     bg: "#c0392b",
   },
   {
     title: "SERVICE EXCELLENCE",
     text: "HONORING COMMITMENT TO OUR PARTNERS AND GIVING SATISFACTION TO OUR CLIENTS' NEEDS THAT BEGINS AND ENDS WITH OUR PEOPLE.",
-    icon: <img src={analytics} height={60} width={80} alt="Analytics" className="h-16 object-contain" />,
+    icon: <img src={analytics} height={60} width={80} alt="Service Excellence" style={{ objectFit: "contain" }} />,
     bg: "#a93226",
   },
   {
     title: "HONESTY AND INTEGRITY",
     text: "WHOLENESS OF OUR PEOPLE TO EARN THE TRUST OF OUR CLIENTS AND PARTNERS AND TO ACT FAIRLY WITHOUT COMPROMISING THE TRUTH.",
-    icon: <img src={scale} height={60} width={80} alt="Scale" className="h-16 object-contain" />,
+    icon: <img src={scale} height={60} width={80} alt="Honesty and Integrity" style={{ objectFit: "contain" }} />,
     bg: "#922b21",
   },
   {
     title: "RELIABILITY",
     text: "TO COMPLY CONSISTENTLY IN TAKING RESPONSIBILITY AND MAINTAINING ACCOUNTABILITY WITH OUR COMMITMENT TO OUR CLIENTS AND PRINCIPAL PARTNERS IN ORDER TO MAINTAIN OUR GOOD REPUTATION IN THE INDUSTRY.",
-    icon: <img src={handshake} height={60} width={80} alt="Handshake" className="h-16 object-contain" />,
+    icon: <img src={handshake} height={60} width={80} alt="Reliability" style={{ objectFit: "contain" }} />,
     bg: "#7b241c",
   },
   {
     title: "PROFESSIONALISM AND TEAMWORK",
     text: "OUR PEOPLE IS CAPABLE OF DELIVERING EXCEPTIONAL SKILLS & COMPETENCE IN SERVICING OUR CLIENTS AND PARTNERS.",
-    icon: <img src={teamsupport} height={60} width={80} alt="Team Support" className="h-16 object-contain" />,
+    icon: <img src={teamsupport} height={60} width={80} alt="Professionalism and Teamwork" style={{ objectFit: "contain" }} />,
     bg: "#641e16",
   },
 ];
+
+const missionItems = [
+  { letter: "G", text: "Give our best quality of service to our clients and business partner in order to earn their trust, loyalty and friendship.", red: true },
+  { letter: "O", text: "Offer quality information, services and options to help satisfy our clients' insurance needs.", red: false },
+  { letter: "L", text: "Lift up the quality of life of its employees.", red: true },
+  { letter: "D", text: "Develop branches all over the Philippines.", red: false },
+  { letter: "P", text: "Penetrate different markets such as car dealerships, financial institutions, individuals and corporate and government accounts.", red: false },
+  { letter: "L", text: "Learn new ideas that will be beneficial to organization and its partners and clients.", red: true },
+  { letter: "A", text: "Always maintain the highest standards of integrity and professionalism in our relationship with our clients and partners.", red: false },
+  { letter: "N", text: "Nurture the relationship with our clients by providing personalized services, most especially during claims.", red: true },
+];
+
+const principals = [
+  { href: "https://strongholdinsurance.com.ph/", src: stronghold, alt: "Stronghold" },
+  { href: "https://sterling-insurance.com.ph/sici/", src: sterling, alt: "Sterling" },
+  { href: "https://www.milestoneguaranty.com/wp2/", src: milestone, alt: "Milestone" },
+  { href: "https://www.bethelgen.com/", src: bethel, alt: "Bethel" },
+];
+
+const clients = [
+  { href: "https://toyota.com.ph/toyotaInsure", src: toyota, alt: "Toyota" },
+  { href: "https://www.ford.com.ph", src: ford, alt: "Ford" },
+  { href: "https://www1.suzuki.com.ph/", src: suzuki, alt: "Suzuki" },
+  { href: "https://www.mitsubishi-motors.com.ph", src: mitsubishi, alt: "Mitsubishi" },
+];
+
+const fullWidth = {
+  width: "100vw",
+  position: "relative",
+  left: "50%",
+  marginLeft: "-50vw",
+  boxSizing: "border-box",
+};
+
+const redTitle = {
+  color: "#c0392b",
+  fontWeight: 900,
+  textTransform: "uppercase",
+  fontFamily: "'Arial Black', Impact, sans-serif",
+  textAlign: "center",
+};
 
 function GoldplanAbout() {
   return (
     <div className="goldplan">
       <Header />
       <main className="main-content">
-        <h1 className="page-title" style={{ textAlign: "center" }}>YOUR SECURITY IS OUR PRIORITY!</h1>
-        <br></br>
-        <p style={{ textAlign: "center" }}>Life is unpredictable. Accidents, natural disasters, or unforeseen events can strike when you least expect. Having the right insurance protects you, your family, and your assets from financial hardship, giving you peace of mind and security no matter what happens next.
-        <p>With GOLDPLAN INSURANCE SERVICES, you're always prepared for the unexpected.</p>
-        </p>
-        <br></br>
 
-        <h1 style={{ textAlign: "center" }}>COMPANY OVERVIEW</h1>
-        <br></br>
-        <p style={{ textAlign: "center" }}>GOLDPLAN INSURANCE SERVICES, founded in March 2004 by Perry and Jennifer Bucay, provides essential insurance protection.</p>
-        <p>The company has gained strong customer recognition by partnering with top insurance providers. GOLDPLAN offers innovative services to meet evolving client needs. It is recognized as a "Best Innovative Solution Provider" for non-life insurance and auto loan financing.</p>
-        <p>As a hassle-free "one-stop-shop," GOLDPLAN focuses on client satisfaction. The company stays current with industry trends to deliver the best service.</p>
+        {/* 1. HERO */}
+        <section style={{
+          ...fullWidth,
+          minHeight: "100vh",
+          background: "linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)), url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80') center center / cover no-repeat",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "80px 48px",
+          textAlign: "center",
+        }}>
+          <h1 style={{
+            color: "white",
+            fontSize: "clamp(2.8rem, 8vw, 6rem)",
+            fontWeight: 900,
+            textTransform: "uppercase",
+            letterSpacing: "0.04em",
+            lineHeight: 1.1,
+            marginBottom: "40px",
+            fontFamily: "'Arial Black', Impact, sans-serif",
+            maxWidth: "1100px",
+          }}>
+            YOUR SECURITY IS OUR PRIORITY!
+          </h1>
+          <p style={{
+            color: "white",
+            fontSize: "clamp(0.85rem, 1.5vw, 1rem)",
+            textTransform: "uppercase",
+            letterSpacing: "0.06em",
+            lineHeight: 1.9,
+            maxWidth: "900px",
+            marginBottom: "20px",
+            opacity: 0.92,
+          }}>
+            LIFE IS UNPREDICTABLE. ACCIDENTS, NATURAL DISASTERS, OR UNFORESEEN EVENTS CAN STRIKE WHEN YOU LEAST
+            EXPECT. HAVING THE RIGHT INSURANCE PROTECTS YOU, YOUR FAMILY, AND YOUR ASSETS FROM FINANCIAL HARDSHIP,
+            GIVING YOU PEACE OF MIND AND SECURITY NO MATTER WHAT HAPPENS NEXT.
+          </p>
+          <p style={{
+            color: "white",
+            fontSize: "clamp(0.85rem, 1.5vw, 1rem)",
+            textTransform: "uppercase",
+            letterSpacing: "0.06em",
+            lineHeight: 1.9,
+            maxWidth: "900px",
+            marginBottom: "48px",
+          }}>
+            WITH <strong>GOLDPLAN INSURANCE SERVICES</strong>, YOU'RE ALWAYS PREPARED FOR THE UNEXPECTED.
+          </p>
+          <div style={{ color: "white", fontSize: "2.5rem", opacity: 0.8 }}>&#8964;</div>
+        </section>
 
-        <section className="about-page">
-          <h1 style={{ textAlign: "center" }}>ABOUT GOLDPLAN INSURANCE</h1>
-          <p style={{ textAlign: "center" }}>For over 20 years, GoldPlan Insurance Services has been offering a wide range of comprehensive insurance solutions, including motor car, property, and health insurance. We aim to provide security, peace of mind, and exceptional service to all our clients.</p>
-
-          <h1>OUR GOLDEN VISION</h1>
-          <p>GOLDPLAN INSURANCE SERVICES aims to become the #1 non-life insurance agency in the Philippines, providing remarkable and balanced business relationships that create positive and lasting experiences for our customers and business partners. We aspire to be the foremost insurance service provider that comes to mind regarding non-life insurance, offering unparalleled service.</p>
-
-        <section style={{ backgroundColor: "#1c1c1c", minHeight: "100vh", width: "100vw", marginLeft: "calc(-50vw + 50%)", padding: "96px 48px", boxSizing: "border-box" }}>
-          {/* ── OUR CORE VALUES ── */}
-          <div style={{ width: "100%" }}>
-            {/* Header */}
-            <div style={{
-              background: "linear-gradient(to bottom, #f0f0f0, #e0e0e0)",
-              textAlign: "center",
-              padding: "56px 24px",
-              width: "100vw",
-              marginLeft: "calc(-50vw + 50%)"
+        {/* 2. COMPANY OVERVIEW */}
+        <section style={{
+          ...fullWidth,
+          backgroundColor: "#c0392b",
+          padding: "80px 64px",
+          display: "flex",
+          alignItems: "center",
+          gap: "64px",
+          flexWrap: "wrap",
+        }}>
+          <div style={{ flex: "1 1 340px", maxWidth: "520px" }}>
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+              alt="Team meeting"
+              style={{ width: "100%", height: "480px", objectFit: "cover", borderRadius: "16px", display: "block" }}
+            />
+          </div>
+          <div style={{ flex: "1 1 340px", color: "white" }}>
+            <h2 style={{
+              fontSize: "clamp(3rem, 7vw, 5.5rem)",
+              fontWeight: 900,
+              textTransform: "uppercase",
+              lineHeight: 1.0,
+              marginBottom: "20px",
+              fontFamily: "'Arial Black', Impact, sans-serif",
             }}>
-              <h2 style={{
-                color: "#c0392b",
-                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-                fontWeight: 900,
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                fontFamily: "'Arial Black', Impact, sans-serif",
-                margin: 0,
-              }}>
-   
-                <p style={{ margin: 0, fontSize: "1.5rem", fontWeight: 700 }}>OUR CORE VALUES</p>
-              </h2>
+              COMPANY<br />OVERVIEW
+            </h2>
+            <div style={{ display: "flex", gap: "10px", marginBottom: "24px", fontSize: "1.4rem" }}>
+              {[...Array(5)].map((_, i) => <span key={i} style={{ opacity: 0.85 }}>☆</span>)}
             </div>
-
-            {/* Five columns */}
-            <div style={{ display: "flex", flexWrap: "wrap", width: "100vw", marginLeft: "calc(-50vw + 50%)"}}>
-              {coreValues.map((val, i) => (
-                <div
-                  key={i}
-                  style={{
-                    flex: "1 1 180px",
-                    backgroundColor: val.bg,
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    padding: "40px 32px",
-                    minHeight: "420px",
-                  }}
-                >
-                  <div>
-                    <h3 style={{
-                      color: "white",
-                      fontSize: "0.95rem",
-                      fontWeight: 800,
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      marginBottom: "20px",
-                      lineHeight: 1.4,
-                      fontFamily: "'Arial Narrow', Arial, sans-serif",
-                    }}>
-                      {val.title}
-                    </h3>
-                    <p style={{
-                      color: "white",
-                      fontSize: "0.75rem",
-                      lineHeight: 1.7,
-                      textTransform: "uppercase",
-                      letterSpacing: "0.04em",
-                      opacity: 0.92,
-                      margin: 0,
-                    }}>
-                      {val.text}
-                    </p>
-                  </div>
-                  <div style={{ marginTop: "32px", opacity: 0.9 }}>
-                    {val.icon}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          </section>
-          {/* ── END OUR CORE VALUES ── */}
-
-          {/* Mission Section */}
-          <div style={{ backgroundColor: "#111" }} className="py-20 px-6"></div>
-          <section style={{ backgroundColor: "#1c1c1c", minHeight: "100vh", width: "100vw", marginLeft: "calc(-50vw + 50%)", padding: "96px 48px", boxSizing: "border-box" }}>
-            <div className="max-w-7xl mx-auto">
-              <h1 className="text-center text-white text-6xl md:text-7xl font-extrabold tracking-wider mb-20 uppercase">
-                OUR PRECIOUS MISSION
-              </h1>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {[
-                  {
-                    letter: "G",
-                    text: "Give our best quality of service to our clients and business partner in order to earn their trust, loyalty and friendship.",
-                    red: true,
-                  },
-                  {
-                    letter: "O",
-                    text: "Offer quality information, services and options to help satisfy our clients' insurance needs.",
-                    red: false,
-                  },
-                  {
-                    letter: "L",
-                    text: "Lift up the quality of life of its employees.",
-                    red: true,
-                  },
-                  {
-                    letter: "D",
-                    text: "Develop branches all over the Philippines.",
-                    red: false,
-                  },
-                  {
-                    letter: "P",
-                    text: "Penetrate different markets such as car dealerships, financial institutions, individuals and corporate and government accounts.",
-                    red: false,
-                  },
-                  {
-                    letter: "L",
-                    text: "Learn new ideas that will be beneficial to organization and its partners and clients.",
-                    red: true,
-                  },
-                  {
-                    letter: "A",
-                    text: "Always maintain the highest standards of integrity and professionalism in our relationship with our clients and partners.",
-                    red: false,
-                  },
-                  {
-                    letter: "N",
-                    text: "Nurture the relationship with our clients by providing personalized services, most especially during claims.",
-                    red: true,
-                  }
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className={`relative rounded-xl p-10 min-h-[320px] transition duration-300 hover:scale-105 ${item.red ? "bg-red-600 text-white" : "bg-gray-200 text-red-600"}`}>
-                    <span className={`absolute top-6 right-6 w-6 h-1 rounded ${item.red ? "bg-gray-200" : "bg-red-600"}`}></span>
-                    <h2 className={`text-7xl font-extrabold mb-6 ${item.red ? "text-white" : "text-red-600"}`}>{item.letter}</h2>
-                    <p className="text-sm leading-relaxed uppercase">{item.text}</p>
-                    <div className={`absolute bottom-8 left-10 w-20 h-[2px] ${item.red ? "bg-gray-200" : "bg-red-600"}`}></div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Our Clients */}
-          <div className="py-10 bg-gray-100">
-            <h1 className="text-3xl font-bold text-center mb-8">OUR CLIENTS</h1>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center">
-              <a href="https://toyota.com.ph/toyotaInsure" target="_blank" rel="noopener noreferrer">
-                <img src={toyota} height={100} width={100} alt="Toyota" className="h-16 object-contain" />
-              </a>
-              <a href="https://www.ford.com.ph" target="_blank" rel="noopener noreferrer">
-                <img src={ford} height={100} width={100} alt="Ford" className="h-16 object-contain" />
-              </a>
-              <a href="https://www1.suzuki.com.ph/" target="_blank" rel="noopener noreferrer">
-                <img src={suzuki} height={100} width={100} alt="Suzuki" className="h-16 object-contain" />
-              </a>
-              <a href="https://www.mitsubishi-motors.com.ph" target="_blank" rel="noopener noreferrer">
-                <img src={mitsubishi} height={100} width={150} alt="Mitsubishi" className="h-16 object-contain" />
-              </a>
-            </div>
-
-            <h1 className="text-3xl font-bold text-center mt-10 mb-8">OUR PRINCIPALS</h1>
-          </div>
-
-          <a href="https://www.bethelgen.com/" target="_blank" rel="noopener noreferrer">
-            <img src={bethel} height={60} width={400} alt="Bethel" className="h-16 object-contain" />
-          </a>
-          <a href="https://www.milestoneguaranty.com/wp2/" target="_blank" rel="noopener noreferrer">
-            <img src={milestone} height={60} width={400} alt="Milestone" className="h-16 object-contain" />
-          </a>
-          <a href="https://sterling-insurance.com.ph/sici/" target="_blank" rel="noopener noreferrer">
-            <img src={sterling} height={60} width={400} alt="Sterling" className="h-16 object-contain" />
-          </a>
-          <a href="https://strongholdinsurance.com.ph/" target="_blank" rel="noopener noreferrer">
-            <img src={stronghold} height={150} width={400} alt="Stronghold" className="h-16 object-contain" />
-          </a>
-
-          <div>
-            <p>Ready to Secure Your Future?</p>
-            <h2>Let Us Take Care Of You</h2>
-            <h3>Get a Free Quote Today ⟶</h3>
+            <p style={{ fontSize: "0.9rem", lineHeight: 1.8, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "16px", opacity: 0.95 }}>
+              <strong>GOLDPLAN INSURANCE SERVICES,</strong> FOUNDED IN MARCH 2004 BY PERRY AND JENNIFER BUCAY,
+              PROVIDES ESSENTIAL INSURANCE PROTECTION.
+            </p>
+            <p style={{ fontSize: "0.9rem", lineHeight: 1.8, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "16px", opacity: 0.95 }}>
+              THE COMPANY HAS GAINED STRONG CUSTOMER RECOGNITION BY PARTNERING WITH TOP INSURANCE PROVIDERS.
+              GOLDPLAN OFFERS INNOVATIVE SERVICES TO MEET EVOLVING CLIENT NEEDS. IT IS RECOGNIZED AS A "BEST
+              INNOVATIVE SOLUTION PROVIDER" FOR NON-LIFE INSURANCE AND AUTO LOAN FINANCING.
+            </p>
+            <p style={{ fontSize: "0.9rem", lineHeight: 1.8, textTransform: "uppercase", letterSpacing: "0.05em", opacity: 0.95 }}>
+              AS A HASSLE-FREE "ONE-STOP-SHOP," GOLDPLAN FOCUSES ON CLIENT SATISFACTION. THE COMPANY STAYS
+              CURRENT WITH INDUSTRY TRENDS TO DELIVER THE BEST SERVICE.
+            </p>
           </div>
         </section>
 
+        {/* 3. GOLDEN VISION */}
+        <section style={{
+          ...fullWidth,
+          background: "#f5f5f5",
+          padding: "80px 48px",
+          textAlign: "center",
+        }}>
+          <h2 style={{
+            ...redTitle,
+            fontSize: "clamp(2.5rem, 7vw, 5rem)",
+            letterSpacing: "0.08em",
+            marginBottom: "40px",
+          }}>
+            OUR GOLDEN VISION
+          </h2>
+          <div style={{
+            maxWidth: "780px",
+            margin: "0 auto",
+            background: "white",
+            borderRadius: "12px",
+            padding: "40px 48px",
+            textAlign: "left",
+            boxShadow: "0 2px 20px rgba(0,0,0,0.08)",
+          }}>
+            <p style={{ fontSize: "0.95rem", lineHeight: 1.9, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "20px" }}>
+              <strong>GOLDPLAN INSURANCE SERVICES</strong> AIMS TO BECOME THE #1 NON-LIFE INSURANCE AGENCY IN
+              THE PHILIPPINES, PROVIDING REMARKABLE AND BALANCED BUSINESS RELATIONSHIPS THAT CREATE POSITIVE
+              AND LASTING EXPERIENCES FOR OUR CUSTOMERS AND BUSINESS PARTNERS.
+            </p>
+            <p style={{ fontSize: "0.95rem", lineHeight: 1.9, textTransform: "uppercase", letterSpacing: "0.04em" }}>
+              WE ASPIRE TO BE THE FOREMOST INSURANCE SERVICE PROVIDER THAT COMES TO MIND REGARDING NON-LIFE
+              INSURANCE, OFFERING UNPARALLELED SERVICE.
+            </p>
+          </div>
+        </section>
+
+        {/* 4. CORE VALUES */}
+        <section style={{ ...fullWidth }}>
+          <div style={{
+            background: "linear-gradient(to bottom, #f0f0f0, #e0e0e0)",
+            textAlign: "center",
+            padding: "56px 24px",
+          }}>
+            <h2 style={{
+              ...redTitle,
+              fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+              letterSpacing: "0.15em",
+              margin: 0,
+            }}>
+              OUR CORE VALUES
+            </h2>
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", width: "100%" }}>
+            {coreValues.map((val, i) => (
+              <div key={i} style={{
+                flex: "1 1 180px",
+                backgroundColor: val.bg,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                padding: "40px 32px",
+                minHeight: "420px",
+              }}>
+                <div>
+                  <h3 style={{
+                    color: "white",
+                    fontSize: "0.95rem",
+                    fontWeight: 800,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    marginBottom: "16px",
+                    lineHeight: 1.4,
+                    fontFamily: "'Arial Narrow', Arial, sans-serif",
+                  }}>
+                    {val.title}
+                  </h3>
+                  <p style={{
+                    color: "white",
+                    fontSize: "0.75rem",
+                    lineHeight: 1.7,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.04em",
+                    opacity: 0.92,
+                    margin: 0,
+                  }}>
+                    {val.text}
+                  </p>
+                </div>
+                <div style={{ marginTop: "32px", opacity: 0.9 }}>{val.icon}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 5. OUR PRECIOUS MISSION */}
+        <section style={{
+          ...fullWidth,
+          backgroundColor: "#1c1c1c",
+          minHeight: "100vh",
+          padding: "96px 48px",
+        }}>
+          <h2 style={{
+            ...redTitle,
+            color: "white",
+            fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+            letterSpacing: "0.08em",
+            marginBottom: "64px",
+          }}>
+            OUR PRECIOUS MISSION
+          </h2>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+            gap: "24px",
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}>
+            {missionItems.map((item, index) => (
+              <div
+                key={index}
+                style={{
+                  position: "relative",
+                  borderRadius: "12px",
+                  padding: "40px",
+                  minHeight: "280px",
+                  backgroundColor: item.red ? "#dc2626" : "#e5e7eb",
+                  color: item.red ? "white" : "#dc2626",
+                  transition: "transform 0.3s",
+                  cursor: "default",
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = "scale(1.04)"}
+                onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+              >
+                <span style={{
+                  position: "absolute", top: "20px", right: "20px",
+                  width: "24px", height: "4px", borderRadius: "2px",
+                  backgroundColor: item.red ? "#e5e7eb" : "#dc2626",
+                }} />
+                <h3 style={{
+                  fontSize: "4.5rem",
+                  fontWeight: 900,
+                  marginBottom: "16px",
+                  color: item.red ? "white" : "#dc2626",
+                  lineHeight: 1,
+                  fontFamily: "'Arial Black', Impact, sans-serif",
+                }}>
+                  {item.letter}
+                </h3>
+                <p style={{ fontSize: "0.8rem", lineHeight: 1.7, textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                  {item.text}
+                </p>
+                <span style={{
+                  position: "absolute", bottom: "28px", left: "40px",
+                  width: "64px", height: "2px",
+                  backgroundColor: item.red ? "#e5e7eb" : "#dc2626",
+                }} />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 6. OUR CLIENTS */}
+        <section style={{
+          ...fullWidth,
+          background: "#f9f9f9",
+          padding: "72px 48px",
+          textAlign: "center",
+        }}>
+          <h2 style={{
+            ...redTitle,
+            fontSize: "clamp(2rem, 5vw, 3rem)",
+            letterSpacing: "0.1em",
+            marginBottom: "48px",
+          }}>
+            OUR CLIENTS
+          </h2>
+          <div style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "32px",
+            maxWidth: "900px",
+            margin: "0 auto",
+          }}>
+            {clients.map((c, i) => (
+              <a key={i} href={c.href} target="_blank" rel="noopener noreferrer" style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "24px 32px",
+                borderRadius: "10px",
+                border: "1px solid #e5e7eb",
+                background: "white",
+                minWidth: "140px",
+              }}>
+                <img src={c.src} alt={c.alt} style={{ maxHeight: "60px", maxWidth: "120px", objectFit: "contain" }} />
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* 7. OUR PRINCIPALS */}
+        <section style={{
+          ...fullWidth,
+          background: "white",
+          padding: "80px 48px",
+        }}>
+          <h2 style={{
+            ...redTitle,
+            fontSize: "clamp(2rem, 5vw, 3.5rem)",
+            letterSpacing: "0.1em",
+            marginBottom: "48px",
+          }}>
+            OUR PRINCIPALS
+          </h2>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gap: "20px",
+            maxWidth: "1100px",
+            margin: "0 auto",
+          }}>
+            {principals.map((p, i) => (
+              <a key={i} href={p.href} target="_blank" rel="noopener noreferrer" style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                border: "1px solid #e5e7eb",
+                borderRadius: "12px",
+                padding: "40px 32px",
+                minHeight: "160px",
+                textDecoration: "none",
+              }}>
+                <img src={p.src} alt={p.alt} style={{ maxHeight: "90px", maxWidth: "100%", objectFit: "contain" }} />
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* 8. CTA */}
+        <section style={{
+          ...fullWidth,
+          display: "flex",
+          minHeight: "480px",
+        }}>
+          <div style={{
+            flex: "0 0 55%",
+            backgroundColor: "#c0392b",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: "64px 72px",
+          }}>
+            <p style={{
+              color: "white",
+              fontSize: "0.85rem",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              margin: "0 0 20px 0",
+              opacity: 0.9,
+            }}>
+              READY TO SECURE YOUR FUTURE?
+            </p>
+            <h2 style={{
+              color: "white",
+              fontSize: "clamp(2.5rem, 5vw, 4rem)",
+              fontWeight: 900,
+              textTransform: "uppercase",
+              lineHeight: 1.05,
+              fontFamily: "'Arial Black', Impact, sans-serif",
+              margin: "0 0 28px 0",
+              letterSpacing: "0.02em",
+            }}>
+              LET US TAKE<br />CARE OF YOU
+            </h2>
+            <a href="/contact" style={{
+              color: "white",
+              fontSize: "0.85rem",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              textDecoration: "none",
+              opacity: 0.9,
+            }}>
+              GET A FREE QUOTE TODAY →
+            </a>
+          </div>
+          <div style={{
+            flex: "0 0 45%",
+            backgroundImage: "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }} />
+        </section>
+
       </main>
+
+      {/* FOOTER */}
       <footer className="footer">
-        <div className="flex w-full items-center justify-center gap-4 flex-col">
-          <h1>CONTACT US</h1>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+          <h3>CONTACT US</h3>
           <p>Get in touch with us for any inquiries or to start your financial journey.</p>
         </div>
-        <br />
         <br />
         <div className="contact-info" style={{ color: "white" }}>
           <div className="contact-item">
@@ -279,10 +517,8 @@ function GoldplanAbout() {
             <p>Monday - Friday<br />8:00 AM – 5:00 PM<br />Saturday – Sunday – Closed</p>
           </div>
         </div>
-        <p>&copy; 2023 Goldplan Insurance Services Finance. All rights reserved.</p>
+        <p>&copy; 2025 Goldplan Insurance Services. All rights reserved.</p>
         <div className="footer-links">
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
         </div>
       </footer>
     </div>
